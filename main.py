@@ -1,7 +1,6 @@
 from tkinter import *
 from tkinter import messagebox
 import base64
-import os
 
 def decrypt():
     password = code.get()
@@ -24,10 +23,10 @@ def decrypt():
         text2.insert(END, decrypt)
 
     elif password=="":
-        messagebox.showerror("encryption", "Input Password")
+        messagebox.showerror("Decryption", "Input Password")
 
     elif password != "1234":
-        messagebox.showerror("encryption", "Invalid Password")
+        messagebox.showerror("Decryption", "Invalid Password")
 
 def encrypt():
     password = code.get()
@@ -50,10 +49,10 @@ def encrypt():
         text2.insert(END, encrypt)
 
     elif password=="":
-        messagebox.showerror("encryption", "Input Password")
+        messagebox.showerror("Encryption", "Input Password")
 
     elif password != "1234":
-        messagebox.showerror("encryption", "Invalid Password")
+        messagebox.showerror("Encryption", "Invalid Password")
 
 
 def main_screen():
@@ -83,9 +82,9 @@ def main_screen():
     code=StringVar()
     Entry(textvariable=code, width=19, bd=0, font=("arial", 25), show="*").place(x=10, y=200)
 
-    Button(text="Encrypt", height="2", width=23, bg="#ed9299", fg="white", bd=0, command=encrypt).place(x=10, y=250)
-    Button(text="Decrypt", height="2", width=23, bg="#00bd56", fg="white", bd=0, command=decrypt).place(x=200, y=250)
-    Button(text="Reset", height="2", width=50, bg="#1089ff", fg="white", bd=0, command=reset).place(x=10, y=300)
+    Button(text="ENCRYPT", height="2", width=23, bg="#ed9299", fg="white", bd=0, command=encrypt).place(x=10, y=250)
+    Button(text="DECRYPT", height="2", width=23, bg="#00bd56", fg="white", bd=0, command=decrypt).place(x=200, y=250)
+    Button(text="RESET", height="2", width=50, bg="#1089ff", fg="white", bd=0, command=reset).place(x=10, y=300)
 
     screen.mainloop()
 
